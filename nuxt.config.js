@@ -63,20 +63,21 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseUrl: 'http://127.0.0.1:8000/api/'
+    baseUrl: process.env.API_URL
+
   },
 
-  publicRuntimeConfig: {
-    axios: {
-      browserBaseURL: process.env.BROWSER_BASE_URL
-    }
-  },
-
-  privateRuntimeConfig: {
-    axios: {
-      baseURL: process.env.BASE_URL
-    }
-  },
+  // publicRuntimeConfig: {
+  //   axios: {
+  //     browserBaseURL: process.env.BROWSER_BASE_URL
+  //   }
+  // },
+  //
+  // privateRuntimeConfig: {
+  //   axios: {
+  //     baseURL: process.env.BASE_URL
+  //   }
+  // },
 
   /*
   ** Content module configuration
