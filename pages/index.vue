@@ -5,6 +5,7 @@
       <b-row class="text-center">
         <b-col>1 of 3</b-col>
         <b-col cols="8">
+          <TweetForm v-show="$store.getters.isAuthenticated"/>
           <TweetsCard v-for="tweet in tweets" :key="tweet.id" :tweet="tweet" v-show="tweets"/>
         </b-col>
         <b-col>3 of 3</b-col>
@@ -15,15 +16,20 @@
 
 <script>
   import TweetsCard from "~/components/TweetsCard";
+  import TweetForm from "~/components/TweetForm";
 
   export default {
 
     components: {
-      TweetsCard
+      TweetsCard,
+      TweetForm
+
     },
 
     mounted() {
+      this.$store.dispatch('inIt')
       this.$store.dispatch('getTweets')
+
     },
 
     computed: {

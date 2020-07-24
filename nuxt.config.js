@@ -57,13 +57,17 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+
+    // Doc : https://auth.nuxtjs.org/guide/setup.html
+
+    '@nuxtjs/auth'
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseUrl: process.env.API_URL
+    baseUrl: process.env.API_URL,
 
   },
 

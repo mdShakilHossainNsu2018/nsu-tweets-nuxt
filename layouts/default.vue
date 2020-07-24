@@ -2,8 +2,11 @@
   <div>
     <NavBar/>
 
+    <b-container fluid>
+      <!-- Content here -->
+      <nuxt/>
+    </b-container>
 
-    <nuxt/>
   </div>
 
 </template>
